@@ -11,7 +11,6 @@
      <maven.compiler.source>1.8</maven.compiler.source>
      <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -20,4 +19,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>vytec-releases</id>
+      <name>vytec-releases</name>
+      <url>http://ec2-18-217-204-87.us-east-2.compute.amazonaws.com:8081/repository/vytec-releases/</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>vytec-snapshots</id>
+      <name>vytec-snapshots</name>
+      <url>http://ec2-18-217-204-87.us-east-2.compute.amazonaws.com:8081/repository/vytec-snapshots/</url>
+      <layout>legacy</layout>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
