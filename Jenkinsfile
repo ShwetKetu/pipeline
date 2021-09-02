@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/vytec-app/app.git'
-                sh "mvn -Dmaven.test.failure.ignore=true clean deploy"
+                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy"
             }
             post {  
                 success {
