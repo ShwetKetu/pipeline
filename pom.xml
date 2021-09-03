@@ -24,14 +24,14 @@
       <uniqueVersion>false</uniqueVersion>
       <id>vytec-releases</id>
       <name>vytec-releases</name>
-      <url>http://ec2-18-217-204-87.us-east-2.compute.amazonaws.com:8081/repository/vytec-releases/</url>
+      <url>http://172.31.16.71:8081/repository/vytec-releases/</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <uniqueVersion>true</uniqueVersion>
       <id>vytec-snapshots</id>
       <name>vytec-snapshots</name>
-      <url>http://ec2-18-217-204-87.us-east-2.compute.amazonaws.com:8081/repository/vytec-snapshots/</url>
+      <url>http://172.31.16.71:8081/repository/vytec-snapshots/</url>
       <layout>legacy</layout>
     </snapshotRepository>
   </distributionManagement>
