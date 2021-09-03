@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/vytec-app/app.git'
-                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy"
+                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy sonar:sonar -D sonar.host.url=http://18.117.83.250:31360/"
             }
             post {  
                 success {
