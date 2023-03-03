@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'maven-label' }
+    agent { label 'agent1' }
     tools {    
         maven "maven-3.6.2"
     }
@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/vytec-app/app.git'
-                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy sonar:sonar -D sonar.host.url=http://18.117.83.250:31360/"
+                git 'https://github.com/ShwetKetu/pipeline.git'
+                sh "mvn -Dmaven.test.failure.ignore=true clean install"
             }
             post {  
                 success {
