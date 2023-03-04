@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'agent1' }
     tools {    
-        maven "maven-3.6.2"
+        maven "maven"
     }
     
     stages {
