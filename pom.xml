@@ -30,4 +30,20 @@
     </plugins>
   </pluginManagement>
 </build>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>vytec-releases</id>
+      <name>vytec-releases</name>
+      <url>http://34.211.12.97:8081/repository/maven-releases/</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>vytec-snapshots</id>
+      <name>vytec-snapshots</name>
+      <url>http://34.211.12.97:8081/repository/maven-snapshots/</url>
+      <layout>legacy</layout>
+    </snapshotRepository>
+  </distributionManagement>
 </project>

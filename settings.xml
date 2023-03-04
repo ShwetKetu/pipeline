@@ -5,13 +5,13 @@
       <servers>
         <server>
           <id>vytec-snapshots</id>
-          <username>vytecuser</username>
-          <password>vytecuser</password>
+          <username>admin</username>
+          <password>Shwet@123</password>
         </server>
         <server>
           <id>vytec-releases</id>
-          <username>vytecuser</username>
-          <password>vytecuser</password>
+          <username>admin</username>
+          <password>Shwet@123</password>
         </server>
       </servers>
     </settings>
