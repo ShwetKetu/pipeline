@@ -1,16 +1,20 @@
 pipeline {
     agent { label 'agent1' }
-    tools {    
+    tools {
         maven "maven"
     }
-    
+
     stages {
-        stage('Build') {
+        stage('checkout') {
             steps {
                 git 'https://github.com/ShwetKetu/pipeline.git'
-                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy"
             }
-            post {  
+        }
+    stage('Build') {
+            steps {
+                sh "mvn -Dmaven.test.failure.ignore=true clean install"
+            }
+            post {
                 success {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
